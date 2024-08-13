@@ -16,32 +16,13 @@ To get started with the ***Privileged Access Management*** (PAM)features in {{ e
 4. Next, head to ***Administration – System Permissions – Modules***.
 5. Configure access to the PAM system for users/admins and manage privileged accounts rights on who can edit the privileged entries. Then, click ***Save***. ![Administration – System permissions – Modules – Privileged access](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2106.png)
 
-## Add a PAM provider
-
-In ***Administration – Privileged Access – Providers***, add a provider. The available types are:
-
-* ***Managed*** providers: ***Domain User*** (AD), ***Local User*** (SSH), ***SQL Server***, ***Windows User***, ***Azure AD User***
-* ***Password reset only*** (unmanaged) providers: ***MySQL User***, ***Cisco User***, ***Oracle User***
-* ***AnyIdentity*** providers: ***Windows Accounts***, ***Windows Local Accounts***
-
-![Managed PAM providers](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2107.png) ![Password reset only PAM providers](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2108.png) ![AnyIdentity PAM providers](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2109.png) When adding the provider, make sure to enable the ***Add PAM {{ en.VLT }}*** and ***Add Scan Configuration*** options under ***Actions***. ![PAM provider configuration](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2110.png)
-
-{% snippet, "badgeHelp" %}
-For more information, please refer to [Providers](/pam/server/providers/).
-{% endsnippet %}
-
-When you click ***Save***, the ***Scan Configuration*** appears.
-
 ## Add a scan configuration
 
 1. Confirm that it is the correct provider, domain name, and domain container (where the accounts are located).
 2. Make sure the ***Start Scan on Save*** option is enabled under ***Actions***.
 3. Click ***OK***. ![PAM Scan configuration](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2111.png)
 
-For more information, please refer to [Scan configurations](/pam/scan-configurations/).
+
 
 ## Import accounts from a scan
 
-1. In ***Administration – Privileged Access – Scan Configuration***, click on ***View result*** next to the scan. ![View results](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2113.png)
-2. Select all the accounts you wish to import. Then, click ***Import Selected Accounts***. ![Import selected accounts](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2114.png)
-3. Import them in the {{ en.VLT }} of your choice. You can also choose whether to reset the password on import or on check-in (recommended). That way, the password is safe the moment the user checks it back in. ![Import accounts](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2115.png) Once imported, you can click into the {{ en.VLT }} and manually check the ***Synchronization Status*** in the top right of the screen. You will know the accounts are well synchronized when the credentials does not have an ***Out of sync*** red warning next to them. ![PAM Account Sync Check](https://cdnweb.devolutions.net/docs/docs_en_server_ServerOp2116.png) You are now ready to use the privileged access management portion of {{ en.DVLS }}.
